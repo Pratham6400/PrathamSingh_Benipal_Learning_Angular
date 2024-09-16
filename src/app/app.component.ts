@@ -11,5 +11,5 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'PrathamSingh-Benipal-Learning-Angular';
   name:string = "Pratham Singh Benipal";
-  hobby: string = "Watching UFC";
+  hobby: number = 175;
 }
