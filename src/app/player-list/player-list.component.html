@@ -1,11 +1,26 @@
+<div class="table">
+  <h2>Players Details</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+      <th>favSport</th>
+      <th>benchPR</th>
+      <th>favFood</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of userList">
+        <td>{{player.name}}</td>
+        <td>{{player.age}}</td>
+        <td>{{player.favSport}}</td>
+        <td>{{player.benchPR}}</td>
+        <td *ngIf="player.favFood"> {{player.favFood}} </td>
 
-<tbody>
-  <tr *ngFor="let player of userList">
-    <td>{{player.name}}</td>
-    <td>{{player.age}}</td>
-    <td>{{player.favSport}}</td>
-    <td>{{player.benchPR}}</td>
-    <td *ngIf="player.favFood"> {{player.favFood}} </td>
+      </tr>
+    </tbody>
+  </table>
 
-  </tr>
-</tbody>
+  <app-player-list-item> [player]="thisPlayer"</app-player-list-item>
+</div>
