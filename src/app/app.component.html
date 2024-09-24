@@ -1,14 +1,6 @@
-<h1>{{title}}</h1>
-<!--adding div tags-->
+
 <div class="container">
-  <h2>User Details</h2>
-  <div *ngFor = "let users of userList" class="listOfUsers">
-<!--here we keep on looping until the array ends-->
-    <p>Name: {{users.name}}</p>
-    <p>Age: {{users.age}}</p>
-    <p>Favourite Sport: {{users.favSport}}</p>
-    <p>Bench Record: {{users.benchPR}}</p>
-<!-- Using ngIf because we marked favFood as optional just so that program does not throw an error.-->
-    <p *ngIf="users.favFood">Favourite Food: {{users.favFood}}</p>
-  </div>
+  <h1>Assignment-3</h1>
+  <app-player-list></app-player-list>
 </div>
+

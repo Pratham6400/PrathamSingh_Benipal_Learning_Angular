@@ -1,1 +1,11 @@
-<p>player-list works!</p>
+
+<tbody>
+  <tr *ngFor="let player of userList">
+    <td>{{player.name}}</td>
+    <td>{{player.age}}</td>
+    <td>{{player.favSport}}</td>
+    <td>{{player.benchPR}}</td>
+    <td *ngIf="player.favFood"> {{player.favFood}} </td>
+
+  </tr>
+</tbody>
