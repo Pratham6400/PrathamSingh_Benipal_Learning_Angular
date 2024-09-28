@@ -1,4 +1,4 @@
-import {User} from "./Shared/Modules/user";
+import {Player} from "./Shared/Modules/player";
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NgForOf, NgIf} from "@angular/common";
@@ -15,13 +15,13 @@ import {PlayerListComponent} from "./player-list/player-list.component";
 export class AppComponent {
   title = "Assignment-2";
   //creating instances of the object
-  user1: User = {name: "Pratham", age:20, benchPR: 225, favSport:"UFC", favFood:"Chicken and Rice"};
-  user2: User = {name: "Alex", age:37, benchPR: 345, favSport:"Kickboxing", favFood:"Strips"};
-  user3: User = {name: "Khabib", age:36, benchPR: 275, favSport:"football", favFood:"Burger"};
-  user4: User = {name: "Omar", age:29, benchPR: 200, favSport:"dancing", favFood:"Steak and Rice"};
-  user5: User = {name: "Irene", age:23, benchPR: 115, favSport:"Basketball", favFood:"Platian"};
-  user6: User = {name: "Leo", age:36, benchPR: 310, favSport:"soccer", favFood:"Shrimp"};
+  user1: Player = {name: "Pratham", age:20, benchPR: 225, favSport:"UFC", favFood:"Chicken and Rice"};
+  user2: Player = {name: "Alex", age:37, benchPR: 345, favSport:"Kickboxing", favFood:"Strips"};
+  user3: Player = {name: "Khabib", age:36, benchPR: 275, favSport:"football", favFood:"Burger"};
+  user4: Player = {name: "Omar", age:29, benchPR: 200, favSport:"dancing", favFood:"Steak and Rice"};
+  user5: Player = {name: "Irene", age:23, benchPR: 115, favSport:"Basketball", favFood:"Platian"};
+  user6: Player = {name: "Leo", age:36, benchPR: 310, favSport:"soccer", favFood:"Shrimp"};
 
   //declaring
-  userList: User[] = [this.user1, this.user2, this.user3, this.user4, this.user5, this.user6];
+  userList: Player[] = [this.user1, this.user2, this.user3, this.user4, this.user5, this.user6];
 }

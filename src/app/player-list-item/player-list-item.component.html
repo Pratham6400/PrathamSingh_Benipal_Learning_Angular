@@ -1,1 +1,8 @@
-<p>player-list-item works!</p>
+<div *ngIf="player" class="player-list-item">
+  <h2>Player Information</h2>
+  <p><strong>Name</strong>{{player.name}}</p>
+  <p><strong>Age</strong>{{player.age}}</p>
+  <p><strong>Favourite Sport</strong>{{player.favSport}}</p>
+  <p><strong>Bench PR</strong>{{player.benchPR}}</p>
+  <p><strong>Favourite Food</strong>{{player.favFood}}</p>
+</div>

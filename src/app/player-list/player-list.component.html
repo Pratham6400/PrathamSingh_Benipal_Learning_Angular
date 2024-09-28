@@ -22,5 +22,5 @@
     </tbody>
   </table>
 
-  <app-player-list-item> [player]="thisPlayer"</app-player-list-item>
+  <app-player-list-item  *ngFor="let player of userList" [player]=player></app-player-list-item>
 </div>

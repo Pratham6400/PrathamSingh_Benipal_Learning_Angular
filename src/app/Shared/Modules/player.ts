@@ -1,4 +1,4 @@
-export interface User {
+export interface Player {
   name: string;
   age: number;
   favSport: string;
