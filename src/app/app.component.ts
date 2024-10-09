@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import {NgForOf, NgIf} from "@angular/common";
 
 import {PlayerListComponent} from "./player-list/player-list.component";
+import {UFCPlayersService} from "./services/ufcplayers.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -13,15 +15,27 @@ import {PlayerListComponent} from "./player-list/player-list.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = "Assignment-2";
-  //creating instances of the object
-  user1: Player = {name: "Pratham", age:20, benchPR: 225, favSport:"UFC", favFood:"Chicken and Rice"};
-  user2: Player = {name: "Alex", age:37, benchPR: 345, favSport:"Kickboxing", favFood:"Strips"};
-  user3: Player = {name: "Khabib", age:36, benchPR: 275, favSport:"football", favFood:"Burger"};
-  user4: Player = {name: "Omar", age:29, benchPR: 200, favSport:"dancing", favFood:"Steak and Rice"};
-  user5: Player = {name: "Irene", age:23, benchPR: 115, favSport:"Basketball", favFood:"Platian"};
-  user6: Player = {name: "Leo", age:36, benchPR: 310, favSport:"soccer", favFood:"Shrimp"};
+  title = "UFC Players";
+  userList: Player[] = [
+    {id:1, name: "Pratham", age:20, benchPR: 225, favSport:"UFC", favFood:"Chicken and Rice"},
+    {id:2, name: "Alex", age:37, benchPR: 345, favSport:"Kickboxing", favFood:"Strips"},
+    {id:3, name: "Khabib", age:36, benchPR: 275, favSport:"football", favFood:"Burger"},
+    {id:4, name: "Omar", age:29, benchPR: 200, favSport:"dancing", favFood:"Steak and Rice"},
+    {id:5, name: "Irene", age:23, benchPR: 115, favSport:"Basketball", favFood:"Platian"},
+    {id:6, name: "Leo", age:36, benchPR: 310, favSport:"soccer", favFood:"Shrimp"}
+  ]
+  clickPlayer?: Player;
 
-  //declaring
-  userList: Player[] = [this.user1, this.user2, this.user3, this.user4, this.user5, this.user6];
+  //adding new service using dependency injection
+  constructor(private ufcplayerService: UFCPlayersService) {
+  }
+
+
+  getItemById(id: number) {
+    this.ufcplayerService.getItemById(id).subscribe({
+      next: (data: Player| undefined) => this.clickPlayer = data,
+      error:err => console.error("Error retrieving data from Playerrs", err),
+      complete:() => console.log("Data is retrieved successfully")
+    });
+  }
 }
