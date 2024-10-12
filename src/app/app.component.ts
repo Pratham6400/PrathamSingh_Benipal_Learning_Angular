@@ -1,6 +1,6 @@
 import {Player} from "./Shared/Modules/player";
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {NgForOf, NgIf} from "@angular/common";
 
 import {PlayerListComponent} from "./player-list/player-list.component";
@@ -10,7 +10,7 @@ import {Observable} from "rxjs";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgIf, NgForOf, PlayerListComponent],
+  imports: [RouterOutlet, NgIf, NgForOf, PlayerListComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

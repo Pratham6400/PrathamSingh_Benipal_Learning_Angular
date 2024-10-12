@@ -1,6 +1,12 @@
 
-<div class="container">
-  <h1>Assignment-4</h1>
-  <app-player-list></app-player-list>
+<div class="nav-bar">
+  <nav>
+    <a routerLink="/players" routerLinkActive="active">Players List</a>
+    <a routerLink="/modify-list-item" routerLinkActive="active">Modify players</a>
+  </nav>
+</div>
+
+<div class="router">
+  <router-outlet></router-outlet>
 </div>
 
