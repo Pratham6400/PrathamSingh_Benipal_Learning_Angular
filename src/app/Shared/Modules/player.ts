@@ -5,4 +5,5 @@ export interface Player {
   favSport: string;
   benchPR: number;
   favFood?: string;
+  imageUrl: string;
 }

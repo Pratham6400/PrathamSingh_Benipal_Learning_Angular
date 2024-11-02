@@ -1,6 +1,8 @@
 <div *ngIf="player" class="player-list-item">
   <h2>Player Information</h2>
-  <img ngSrc="alex" alt="player images" width = "150" height="200" priority>;
+<!--  Navigation buttons-->
+
+  <img ngSrc="image/{{player?.imageUrl}}" alt="Player Pictures" width = "150" height="200" priority>;
   <!--reference for image= https://www.ufc.com/athlete/alex-pereira-->
   <p><strong>Name</strong>{{player.name}}</p>
   <p><strong>Age</strong>{{player.age}}</p>

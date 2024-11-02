@@ -7,7 +7,7 @@ import {Observable, of} from "rxjs";
   providedIn: 'root'
 })
 export class UFCPlayersService {
-  private ufcplayers: Player[] = userList;
+  private ufcplayers = userList;
   constructor() { }
   //adding a method that will return an Observable of the IContent array
   // from the mock-content file in my data folder.

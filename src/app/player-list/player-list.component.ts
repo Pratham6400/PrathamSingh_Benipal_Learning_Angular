@@ -3,6 +3,7 @@ import {NgForOf, NgIf} from "@angular/common";
 import {PlayerListItemComponent} from "../player-list-item/player-list-item.component";
 import {UFCPlayersService} from "../services/ufcplayers.service";
 import {Player} from "../Shared/Modules/player";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-player-list',
@@ -10,7 +11,8 @@ import {Player} from "../Shared/Modules/player";
   imports: [
     NgForOf,
     NgIf,
-    PlayerListItemComponent
+    PlayerListItemComponent,
+    RouterLink
   ],
   templateUrl: './player-list.component.html',
   styleUrl: './player-list.component.css'
