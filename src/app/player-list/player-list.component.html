@@ -2,4 +2,7 @@
 
 
   <app-player-list-item   [player]="player" [routerLink]="['/players',player.id ]"></app-player-list-item>
+<!--  buttons-->
+  <button (click)="editPlayer(player.id)">Edit Player</button>
+  <button (click)="deletePlayer(player.id)">Delete Player</button>
 </div>

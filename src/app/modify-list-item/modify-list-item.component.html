@@ -1,1 +1,40 @@
-<p>modify-list-item works!</p>
+<!--lets start by creating form-->
+<form [formGroup]="playerForm" (ngSubmit)="onSubmit()">
+
+  <div class="forms">
+    <label for="id">ID</label>
+    <input type="number" id="id" formControlName="id"/>
+  </div>
+
+  <div class="forms">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name"/>
+  </div>
+
+  <div class="forms">
+    <label for="age">Age</label>
+    <input type="number" id="age" formControlName="age"/>
+  </div>
+
+  <div class="forms">
+    <label for="favSport">Favourite Sport</label>
+    <input type="text" id="favSport" formControlName="favSport"/>
+  </div>
+
+  <div class="forms">
+    <label for="benchPR">Bench PR</label>
+    <input type="number" id="benchPR" formControlName="benchPR"/>
+  </div>
+
+  <div class="forms">
+    <label for="favFood">Favourite Food</label>
+    <input type="text" id="favFood" formControlName="favFood"/>
+  </div>
+
+<!--  lets add in the buttons now-->
+  <button type="submit">Submit</button>
+  <button type="button" (click)="onDelete()">Delete</button>
+  <button type="button" (click)="navigateToPlayerList()">Go back to Players list</button>
+
+
+</form>

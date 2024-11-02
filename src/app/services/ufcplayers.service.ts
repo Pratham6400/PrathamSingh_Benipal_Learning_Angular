@@ -40,4 +40,7 @@ export class UFCPlayersService {
     return of(this.ufcplayers);
   }
 
+  generateNewId() {
+    return this.ufcplayers.length > 0 ? Math.max(...this.ufcplayers.map(player => player.id)) + 1 : 1;
+  }
 }
