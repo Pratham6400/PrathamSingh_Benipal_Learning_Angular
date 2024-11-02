@@ -15,6 +15,7 @@ export class UFCPlayersService {
     return of(userList);
   }
   //adding a method that accepts a number and returns the content item in the array
+  //methods are already added
   getItemById(id: number): Observable<Player | undefined> {
     const player = this.ufcplayers.find(player=>player.id === id);
     return of(player);
