@@ -52,13 +52,22 @@ export class ModifyListItemComponent implements OnInit {
   }
 
   onSubmit():void{
+
     const player: Player = this.playerForm.value;
+    //console.log('submit',player);
     if(player.id){
       this.playerService.updatePlayer(player);
-    } else{
+      this.playerService.addPlayer(player).subscribe(()=> this.router.navigate(['/players']));
+    }
+
+  }
+  add(){
+    const player: Player = this.playerForm.value;
+    if(player.id){
       player.id = this.playerService.generateNewId();
       this.playerService.addPlayer(player).subscribe(()=> this.router.navigate(['/players']));
     }
+
   }
 
   onDelete(): void{
