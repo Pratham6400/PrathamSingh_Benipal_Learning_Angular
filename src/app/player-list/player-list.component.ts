@@ -19,6 +19,7 @@ import {Router, RouterLink} from "@angular/router";
 })
 export class PlayerListComponent implements OnInit {
   userList: Player[] = [];
+  error: string | null = null;
   //this constructor is used for dependancy injection
   constructor(private ufcplayerService: UFCPlayersService,private router: Router) {
 
@@ -27,10 +28,16 @@ export class PlayerListComponent implements OnInit {
   ngOnInit(): void{
     //using our service to retrieve our array of data
     this.ufcplayerService.getPlayers().subscribe({
-      next: (data: Player[]) => this.userList = data,
-      error:err => console.error("Error retrieving data from Playerrs", err),
+      next: (data: Player[]) => {
+        this.userList = data;
+        this.error= null;
+      },
+      error:err => {
+        this.error = 'Error retrieving data from Playerrs';
+        console.error("Error retrieving data from Playerrs", err)
+      },
       complete:() => console.log("Data is retrieved successfully")
-    })
+    });
   }
 
   // eddit and delete methods
