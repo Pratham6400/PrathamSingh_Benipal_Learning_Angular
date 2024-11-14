@@ -35,7 +35,7 @@ export class PlayerListComponent implements OnInit {
 
   // eddit and delete methods
   editPlayer(id: number): void {
-    this.router.navigate(['/players/edit', id]);
+    this.router.navigate(['edit', id]);
   }
 
   deletePlayer(id: number): void {

@@ -12,7 +12,7 @@ export class UFCPlayersService {
   //adding a method that will return an Observable of the IContent array
   // from the mock-content file in my data folder.
   getPlayers(): Observable<Player[]> {
-    return of(userList);
+    return of(this.ufcplayers);
   }
   //adding a method that accepts a number and returns the content item in the array
   //methods are already added
