@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Player} from "../Shared/Modules/player";
-import {NgIf, NgOptimizedImage} from "@angular/common";
+import {CurrencyPipe, DatePipe, NgIf, NgOptimizedImage, UpperCasePipe} from "@angular/common";
 import {UFCPlayersService} from "../services/ufcplayers.service";
 
 @Component({
@@ -8,7 +8,10 @@ import {UFCPlayersService} from "../services/ufcplayers.service";
   standalone: true,
   imports: [
     NgIf,
-    NgOptimizedImage
+    NgOptimizedImage,
+    CurrencyPipe,
+    DatePipe,
+    UpperCasePipe
   ],
   templateUrl: './player-list-item.component.html',
   styleUrl: './player-list-item.component.css'
