@@ -4,6 +4,7 @@ import {Player} from "../Shared/Modules/player";
 import {ActivatedRoute, Router} from "@angular/router";
 import {UFCPlayersService} from "../services/ufcplayers.service";
 
+
 @Component({
   selector: 'app-modify-list-item',
   standalone: true,
@@ -31,7 +32,9 @@ export class ModifyListItemComponent implements OnInit {
       age: ['', Validators.required],
       favSport: ['', Validators.required],
       benchPR: ['', Validators.required],
-      favFood: ['']
+      favFood: [''],
+      date: new Date(),
+      netWorth: 0,
     })
   }
   ngOnInit(): void {

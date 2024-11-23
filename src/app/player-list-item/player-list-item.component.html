@@ -4,11 +4,11 @@
 
   <img ngSrc="image/{{player.imageUrl}}" alt="Player Pictures" width = "150" height="200" priority>;
   <!--reference for images= https://www.ufc.com/athlete/-->
-  <p><strong>Name</strong>{{player.name | uppercase}}</p>
+  <p><strong>Name</strong>{{ MypipePipe}}</p>
   <p><strong>Age</strong>{{player.age}}</p>
   <p><strong>Favourite Sport</strong>{{player.favSport}}</p>
   <p><strong>Bench PR</strong>{{player.benchPR}}</p>
   <p><strong>Favourite Food</strong>{{player.favFood}}</p>
-  <p><strong>date</strong>{{player.date | date: 'dd-MM--yyyy'}}</p>
+  <p><strong>date</strong>{{player.date | date: 'YYYY-MM-dd'}}</p>
   <p><strong>netWorth</strong>{{player.netWorth | currency: 'CAD': "symbol-narrow"}}</p>
 </div>
