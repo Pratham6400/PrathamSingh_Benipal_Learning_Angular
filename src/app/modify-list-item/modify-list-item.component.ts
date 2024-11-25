@@ -3,13 +3,15 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 import {Player} from "../Shared/Modules/player";
 import {ActivatedRoute, Router} from "@angular/router";
 import {UFCPlayersService} from "../services/ufcplayers.service";
+import {HighlightFocusDirective} from "../directives/highlight-focus.directive";
 
 
 @Component({
   selector: 'app-modify-list-item',
   standalone: true,
   imports: [
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HighlightFocusDirective
   ],
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.css'
