@@ -4,6 +4,8 @@ import {PlayerListItemComponent} from "../player-list-item/player-list-item.comp
 import {UFCPlayersService} from "../services/ufcplayers.service";
 import {Player} from "../Shared/Modules/player";
 import {Router, RouterLink} from "@angular/router";
+import {HoverHighlightDirectiveDirective} from "../directives/hover-highlight-directive.directive";
+
 
 @Component({
   selector: 'app-player-list',
@@ -12,7 +14,8 @@ import {Router, RouterLink} from "@angular/router";
     NgForOf,
     NgIf,
     PlayerListItemComponent,
-    RouterLink
+    RouterLink,
+    HoverHighlightDirectiveDirective
   ],
   templateUrl: './player-list.component.html',
   styleUrl: './player-list.component.css'

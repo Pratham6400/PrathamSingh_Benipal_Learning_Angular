@@ -1,4 +1,4 @@
-<div *ngFor="let player of userList; index as i;" style="{{(i%2 == 0) ? 'background-color: red;' : 'background-color: grey;'}}">
+<div *ngFor="let player of userList; index as i;" style="{{(i%2 == 0) ? 'background-color: red;' : 'background-color: grey;'}}" appHoverHighlisght color="green">
 
 
   <app-player-list-item   [player]="player" [routerLink]="['/players',player.id ]"></app-player-list-item>
