@@ -1,38 +1,38 @@
 <!--lets start by creating form-->
-<form [formGroup]="playerForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="playerForm" (ngSubmit)="onSubmit()" class="psb-form">
 
   <div class="forms">
     <label for="id">ID</label>
     <input type="number" id="id" formControlName="id" appHighlightOnFocus border="2px solid green"/>
   </div>
 
-  <div class="forms">
-    <label for="name">Name</label>
-    <input type="text" id="name" formControlName="name" appHighlightOnFocus border="2px solid green"/>
-  </div>
+  <mat-form-field>
+    <mat-label>Name: </mat-label>
+    <input type="text" name="name" id="name" formControlName="name" appHighlightOnFocus border="5px solid green"/>
+  </mat-form-field>
 
-  <div class="forms">
-    <label for="age">Age</label>
-    <input type="number" id="age" formControlName="age" appHighlightOnFocus border="2px solid green"/>
-  </div>
+  <mat-form-field>
+    <mat-label>Age: </mat-label>
+    <input type="number" name="age" id="age" formControlName="age" appHighlightOnFocus border="5px solid green"/>
+  </mat-form-field>
 
-  <div class="forms">
-    <label for="favSport">Favourite Sport</label>
-    <input type="text" id="favSport" formControlName="favSport" appHighlightOnFocus border="2px solid green"/>
-  </div>
+  <mat-form-field>
+    <mat-label>Favourite Sport: </mat-label>
+    <input type="text" name="favSport" id="favSport" formControlName="favSport" appHighlightOnFocus border="5px solid green"/>
+  </mat-form-field>
 
-  <div class="forms">
-    <label for="benchPR">Bench PR</label>
-    <input type="number" id="benchPR" formControlName="benchPR" appHighlightOnFocus border="2px solid green"/>
-  </div>
+  <mat-form-field>
+    <mat-label>Bench PR: </mat-label>
+    <input type="number" name="benchPR" id="benchPR" formControlName="benchPR" appHighlightOnFocus border="5px solid green"/>
+  </mat-form-field>
 
-  <div class="forms">
-    <label for="favFood">Favourite Food</label>
-    <input type="text" id="favFood" formControlName="favFood" appHighlightOnFocus border="2px solid green"/>
-  </div>
+  <mat-form-field>
+    <mat-label>Favourite Food: </mat-label>
+    <input type="text" name="favFood" id="favFood" formControlName="favFood" appHighlightOnFocus border="5px solid green"/>
+  </mat-form-field>
 
 <!--  lets add in the buttons now-->
-  <button type="submit">Update</button>
+  <button mat-stroked-button matTooltip="Click here" type="submit">Update</button>
   <button type="button" (click)="add()">Add</button>
   <button type="button" (click)="onDelete()">Delete</button>
   <button type="button" (click)="navigateToPlayerList()">Go back to Players list</button>

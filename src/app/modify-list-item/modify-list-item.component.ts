@@ -11,7 +11,8 @@ import {HighlightFocusDirective} from "../directives/highlight-focus.directive";
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    HighlightFocusDirective
+    HighlightFocusDirective,
+
   ],
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.css'
